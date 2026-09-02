@@ -9,3 +9,5 @@ faiss-cpu
 sentence-transformers
 OpenAI
 Pytest
+pytest
+pytest-cov
