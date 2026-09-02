@@ -47,3 +47,10 @@ temp/
 data/vector_store/
 *.npy
 *.faiss
+# Local sample/runtime data
+# Keep source-controlled documentation only; runtime PDFs and vector indexes stay local.
+data/uploads/
+data/vector_store/
+
+# Local sample PDFs
+data/*.pdf

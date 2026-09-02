@@ -1,7 +1,7 @@
 @echo off
 title RAG Pipeline Startup
 
-cd /d D:\Project\Rag_Project\rag-pipeline
+cd /d "%~dp0"
 
 echo ==========================================
 echo       RAG PIPELINE STARTING
@@ -46,7 +46,7 @@ REM ==========================================
 
 echo [3/4] Starting Celery Worker...
 
-start "Celery Worker" cmd /k "D:\Project\Rag_Project\env\Scripts\python.exe -m celery -A app.worker.celery_app.celery_app worker --loglevel=info --pool=solo"
+start "Celery Worker" cmd /k ""%~dp0env\Scripts\python.exe" -m celery -A app.worker.celery_app.celery_app worker --loglevel=info --pool=solo"
 
 timeout /t 5 /nobreak >nul
 
@@ -56,7 +56,7 @@ REM ==========================================
 
 echo [4/4] Starting FastAPI...
 
-start "FastAPI Server" cmd /k "D:\Project\Rag_Project\env\Scripts\python.exe -m uvicorn app.main:app --reload"
+start "FastAPI Server" cmd /k ""%~dp0env\Scripts\python.exe" -m uvicorn app.main:app --reload"
 
 echo.
 echo ==========================================

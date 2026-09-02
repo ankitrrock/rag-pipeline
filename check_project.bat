@@ -1,7 +1,7 @@
 @echo off
 title RAG Pipeline Health Check
 
-cd /d D:\Project\Rag_Project\rag-pipeline
+cd /d "%~dp0"
 
 echo.
 echo ============================================================
@@ -71,7 +71,7 @@ if %errorlevel% equ 0 (
 echo.
 echo Checking Celery configuration...
 
-env\Scripts\python.exe -c "from app.worker.celery_app import celery_app; print('[OK] Celery application loaded'); print('Broker:', celery_app.conf.broker_url); print('Registered tasks:'); [print('  -', t) for t in celery_app.tasks if not t.startswith('celery.')]"
+"%~dp0env\Scripts\python.exe" -c "from app.worker.celery_app import celery_app; print('[OK] Celery application loaded'); print('Broker:', celery_app.conf.broker_url); print('Registered tasks:'); [print('  -', t) for t in celery_app.tasks if not t.startswith('celery.')]"
 
 echo.
 
@@ -103,7 +103,7 @@ REM ============================================================
 echo [5/6] FAISS Vector Store
 echo ------------------------------------------------------------
 
-env\Scripts\python.exe -c "from app.embeddings.vector_store import vector_store; vector_store.load(); print('[OK] FAISS index loaded'); print('Vectors:', vector_store.index.ntotal); print('Chunk IDs:', vector_store.chunk_ids)"
+"%~dp0env\Scripts\python.exe" -c "from app.embeddings.vector_store import vector_store; vector_store.load(); print('[OK] FAISS index loaded'); print('Vectors:', vector_store.index.ntotal); print('Chunk IDs:', vector_store.chunk_ids)"
 
 echo.
 
