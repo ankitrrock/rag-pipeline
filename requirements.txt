@@ -11,3 +11,7 @@ OpenAI
 Pytest
 pytest
 pytest-cov
+pydantic-settings
+pypdf
+pytest-asyncio
+pytest-cov
