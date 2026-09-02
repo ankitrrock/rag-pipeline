@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+pydantic-settings
+python-dotenv
+sqlalchemy
+asyncpg
+alembic
+pypdf
+sentence-transformers
+faiss-cpu
+numpy
+openai
+python-multipart
