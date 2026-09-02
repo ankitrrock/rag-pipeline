@@ -15,3 +15,4 @@ pydantic-settings
 pypdf
 pytest-asyncio
 pytest-cov
+python-multipart
