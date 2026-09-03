@@ -9,3 +9,8 @@ faiss-cpu
 sentence-transformers
 OpenAI
 Pytest
+pydantic-settings
+pypdf
+pytest-asyncio
+pytest-cov
+python-multipart

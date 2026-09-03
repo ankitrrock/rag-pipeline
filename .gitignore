@@ -1,17 +1,22 @@
-# Python
-__pycache__/
-*.py[cod]
-*.pyo
+# Environment
+.env
+.env.*
+!.env.example
 
-# Virtual environment
+# Virtual environments
 env/
 venv/
 .venv/
 
-# Environment variables / secrets
-.env
-.env.*
-!.env.example
+# Python
+__pycache__/
+*.py[cod]
+
+# Testing
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
 
 # IDE
 .vscode/
@@ -25,32 +30,14 @@ Thumbs.db
 *.log
 logs/
 
-# Uploaded documents
+# Runtime uploads
 data/uploads/
 
-# FAISS generated files
-data/faiss/
+# Generated vector store
+data/vector_store/
 *.faiss
-*.index
-
-# Python tools
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-
-# Jupyter
-.ipynb_checkpoints/
+*.npy
 
 # Temporary files
 tmp/
 temp/
-data/vector_store/
-*.npy
-*.faiss
-# Local sample/runtime data
-# Keep source-controlled documentation only; runtime PDFs and vector indexes stay local.
-data/uploads/
-data/vector_store/
-
-# Local sample PDFs
-data/*.pdf
