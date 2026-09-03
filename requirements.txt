@@ -9,8 +9,17 @@ faiss-cpu
 sentence-transformers
 OpenAI
 Pytest
+<<<<<<< HEAD
+=======
+pytest
+pytest-cov
+>>>>>>> 66071c089bd47d037fdb7de2b80b07bcfae82527
 pydantic-settings
 pypdf
 pytest-asyncio
 pytest-cov
+<<<<<<< HEAD
 python-multipart
+=======
+python-multipart
+>>>>>>> 66071c089bd47d037fdb7de2b80b07bcfae82527
